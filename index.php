@@ -11,7 +11,7 @@ and open the template in the editor.
     
     $prince = new Prince('D:\Development\PHP\installedProgram\Engine\bin\prince.exe');
     
-    $filename = date("YmdHis");
+    $filename = "z" . date("YmdHis");
     
 ?>
 
@@ -26,11 +26,16 @@ and open the template in the editor.
         
         <script src="/js/jquery-2.1.4.min.js"></script>
         <script src="/js/materialize.min.js"></script>
-        <script src="/classes/ckeditor/ckeditor.js"></script>
         
     </head>
     <body class="grey lighten-5">
         <div class="container">
+            
+            <script src="/classes/ckeditor/ckeditor.js"></script>
+            <script>
+                CKEDITOR.env.isCompatible = true;
+            </script>
+            
             <?php
             
             if (!empty(filter_input(INPUT_POST, 'PDFEditor'))) {
@@ -40,7 +45,7 @@ and open the template in the editor.
             }
                 
             ?>
-            <form method="POST" name="form" id="form">
+            <form method="POST" name="form" id="form" style="max-width: 750px !important;">
                 <div class="col s12"> <textarea class="ckeditor" name="PDFEditor"></textarea></div>
             
                 <center>
