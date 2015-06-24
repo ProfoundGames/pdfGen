@@ -19,13 +19,13 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title></title>
-        <link rel="stylesheet" href="/css/default.css">
-        <link rel="stylesheet" href="/css/materialize.min.css">
-        <link rel="stylesheet" href="/classes/ckeditor/contents.css">
+        <link rel="stylesheet" href="css/default.css">
+        <link rel="stylesheet" href="css/materialize.min.css">
+        <link rel="stylesheet" href="classes/ckeditor/contents.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         
-        <script src="/js/jquery-2.1.4.min.js"></script>
-        <script src="/js/materialize.min.js"></script>
+        <script src="js/jquery-2.1.4.min.js"></script>
+        <script src="js/materialize.min.js"></script>
         <script src='https://www.google.com/recaptcha/api.js'></script>
         
     </head>
@@ -33,7 +33,7 @@ and open the template in the editor.
         <div class="valign-wrapper content center-align">
             <div>
             
-            <script src="/classes/ckeditor/ckeditor.js"></script>
+            <script src="classes/ckeditor/ckeditor.js"></script>
             <script>
                 CKEDITOR.env.isCompatible = true;
             </script>
