@@ -26,10 +26,12 @@ and open the template in the editor.
         
         <script src="/js/jquery-2.1.4.min.js"></script>
         <script src="/js/materialize.min.js"></script>
+        <script src='https://www.google.com/recaptcha/api.js'></script>
         
     </head>
     <body class="grey lighten-5">
-        <div class="container">
+        <div class="valign-wrapper content center-align">
+            <div>
             
             <script src="/classes/ckeditor/ckeditor.js"></script>
             <script>
@@ -38,7 +40,7 @@ and open the template in the editor.
             
             <?php
             
-            if (!empty(filter_input(INPUT_POST, 'PDFEditor'))) {
+            if (!empty(filter_input(INPUT_POST, 'PDFEditor')) && !empty(filter_input(INPUT_POST, 'g-recaptcha-response'))) {
                 if ($prince->convert_string_to_file(filter_input(INPUT_POST, 'PDFEditor'), $filename . '.pdf')) {
                     header('Location: '. '/' . $filename . '.pdf');
                 }
@@ -47,11 +49,15 @@ and open the template in the editor.
             ?>
             <form method="POST" name="form" id="form" style="max-width: 750px !important;">
                 <div class="col s12"> <textarea class="ckeditor" name="PDFEditor"></textarea></div>
-            
+                
                 <center>
+                    
+                    <div class="g-recaptcha" data-sitekey="Site_key"></div>
                     <input type="submit" class="btn btn-success create" value="Submit" name="submit">       
                 </center>
             </form>
+                
+            </div>
         </div>
         <div class="fixed-action-btn">
             

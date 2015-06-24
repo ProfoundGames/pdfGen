@@ -17,3 +17,20 @@ and open the template in the editor.
 .create{
     margin-top: 50px;
 }
+
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+}
+
+.content{
+    height: 100%;
+    display: block;
+}
+
+.g-recaptcha{
+    margin-top: 25px;
+}
